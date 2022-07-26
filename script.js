@@ -1,29 +1,13 @@
-/*let desayuno = "café"
+let cantFamiliares = parseInt(prompt("Ingrese la cantidad de personas que hay en su núcleo familiar:"));
+let edad; 
+let sumaEdades = 0; //acumulador
+let i; //contador
 
-if(desayuno == "café") {
-    console.log("Desayuno café con leche")
-} else {
-    console.log("No desayuno café con leche")
-}*/
+for (i=1; i<=cantFamiliares; i++){
+    edad = parseInt(prompt("Por favor, ingrese la edad del familiar n° " + i));
 
-/*let desayuno = prompt("Ingrese su desayuno").toLowerCase();
-
-if(desayuno == "cafe") {
-    console.log("Desayuno café con leche")
-} else if(desayuno == "te") {
-    console.log("No desayuno café con leche, DESAYUNO TE")
-} else if (desayuno == "chocolatada") {
-    console.log("Desayuno chocolatada")
-} else {
-    console.log("No tenemos ese desayuno, disculpe.")
-}*/
-
-let numero = parseInt(prompt("Ingrese un número:"));
-
-if (numero % 2 == 0) {
-    console.log("El número es par uwu");
-} else {
-    console.log("El número es impar unu");
+    sumaEdades = sumaEdades + edad;
 }
 
+alert(`La edad promedio de su núcleo familiar es de ${sumaEdades / cantFamiliares} años.`);
 
