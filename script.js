@@ -3,6 +3,8 @@ let edad;
 let sumaEdades = 0; //acumulador
 let i; //contador
 
+function promedio(){
+
 for (i=1; i<=cantFamiliares; i++){
     edad = parseInt(prompt("Por favor, ingrese la edad del familiar n° " + i));
 
@@ -10,4 +12,5 @@ for (i=1; i<=cantFamiliares; i++){
 }
 
 alert(`La edad promedio de su núcleo familiar es de ${sumaEdades / cantFamiliares} años.`);
+}
 
