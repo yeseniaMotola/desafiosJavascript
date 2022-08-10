@@ -66,7 +66,7 @@ formulario.addEventListener("submit", (evento) => {
 
 
 
-//usuarios.push(new usuario ());*/
+//usuarios.push(new usuario ());
 
 
 
@@ -97,13 +97,13 @@ console.table(michiballs)
 
 alert(`Estas son las etnias conocidas de la raza alienígena "Michiballs": ${etniasMichiballs}`)
 
-/*michiballs.push("michi fresita")
+michiballs.push("michi fresita")
 michiballs.push("michi mandarinita")
 
-console.log(michiballs)*/
+console.log(michiballs)
 
 
-/*michiBall3.comunicarse()
+michiBall3.comunicarse()
 michiBall4.pedirAbrazo()
 michiBall2.comunicarse()
 michiBall5.pedirAbrazo()*/
