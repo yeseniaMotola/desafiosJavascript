@@ -22,12 +22,11 @@ body{
 }
 
 #michiball{
-    width: 40px;
+    width: 35px;
     height: 35px;
     background-color: #f780d9;
-    border-radius: 50%;
     position: relative;
-    animation: slide 1.6s linear infinite
+    animation: slide 1.7s linear infinite
 }
 
 @keyframes slide {
@@ -39,7 +38,6 @@ body{
     width: 100px;
     height: 40px;
     background-color: #000000;
-    border-radius: 50%;
     position: absolute;
     bottom: 0;
     margin-left: 350px;

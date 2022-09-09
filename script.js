@@ -1,13 +1,13 @@
 //Variables
- portal = document.getElementById('portal');
- michiball = document.getElementById('michiball');
- puntos = document.querySelector('#puntos span');
- contador = 0
+ let portal = document.getElementById('portal');
+ let michiball = document.getElementById('michiball');
+ let puntos = document.querySelector('#puntos span');
+ let contador = 0
 
 //funciones para mover el portal
 
 function moveLeft(){
-  portalLeft = parseInt(window.getComputedStyle(portal).getPropertyValue('left'));
+  let portalLeft = parseInt(window.getComputedStyle(portal).getPropertyValue('left'));
   portalLeft -= 25
   if(portalLeft >= -360){
     portal.style.left = portalLeft + 'px';
@@ -36,33 +36,35 @@ document.addEventListener("keydown", function(e){
 //Generar michiballs aleatoriamente
 
 setInterval(function(){
-  numeroAleatorio = Math.floor(Math.random() * 30) * 25
+  let numeroAleatorio = Math.floor(Math.random() * 26) * 30
   michiball.style.left = numeroAleatorio + 'px'
   console.log(numeroAleatorio)
-},1600)
+},1700)
 
-x = setInterval(function(){
+//Contar puntos y terminar el juego cuando no se atrape
+
+let contarPuntos = setInterval(function(){
   
   puntos.innerHTML = contador
 
   contador++;
 
-  michiballTop = parseInt(window.getComputedStyle(michiballTop).getPropertyValue('top'))
-  portalTop = parseInt(window.getComputedStyle(portalTop).getPropertyValue('top'))
-  michiballLeft = parseInt(window.getComputedStyle(michiballLeft).getPropertyValue('left'))
-  portalLeft = parseInt(window.getComputedStyle(portalLeft).getPropertyValue('left'))
+  let michiballTop = parseInt(window.getComputedStyle(michiballTop).getPropertyValue('top'))
+  let portalTop = parseInt(window.getComputedStyle(portalTop).getPropertyValue('top'))
+  let michiballLeft = parseInt(window.getComputedStyle(michiballLeft).getPropertyValue('left'))
+  let portalLeft = parseInt(window.getComputedStyle(portalLeft).getPropertyValue('left'))
   
-  if((michiballTop > 460) && (michiballTop < 500)){
+  if((michiballTop > 480) && (michiballTop < 500)){
     if(portalLeft == michiballLeft){
       
     } else {
       alert("GAME OVER");
-      clearInterval(x)
+      clearInterval(contarPuntos)
       contador = 0
       michiball.style.animation = 'none';
     }
   }
-},10)
+},50)
 
 
 
